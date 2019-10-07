@@ -1,0 +1,17 @@
+<div class="header">
+<p  class="heading">Thread</p>
+<div (click)="onCloseThread()"class="close">X</div>
+</div>
+<p *ngIf=chat[0] >{{chat[0].text}}</p>
+  <div *ngIf=chat[0] class="chat-list">
+    
+                <div  *ngFor="let msg of chat[0].child" >
+                        <div class="chat-row">
+                            <span class="text">{{msg.text}}</span>
+                            <span class="time">{{msg.timestamp}}</span> 
+                        </div>
+                </div>
+            
+</div>
+<input class="chat-input" placeholder="Type here" [(ngModel)]="value" #ctrl="ngModel" (keyup.enter)="onEnter()" required>
+      

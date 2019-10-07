@@ -1,0 +1,56 @@
+app-chat {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;    
+}
+
+
+.main-container {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.8px;
+}
+
+input.chat-input {
+    padding: 8px;
+    margin: 15px 0;
+    width: -webkit-fill-available;
+
+}
+span.time {
+    color: #888282;
+    letter-spacing: 0;
+    padding: 5px;
+    font-size: 12px;
+}
+
+span.text {
+    font-size: 15px;
+}
+
+.chat-list {
+    width: -webkit-fill-available;
+}
+.chat-row {
+    padding: 7px 0px;
+}
+
+.left-container {
+    width: -webkit-fill-available;
+    padding: 20px 35px 20px 10px;
+}
+
+.right-container {
+    min-width: 350px;
+}
+.close {
+    padding: 7px 0px 7px 10px;
+    background: #cccccc26;
+    margin: 10px;
+    width: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,31 @@
+
+<div class="main-container">
+    <div class="left-container">
+        <p class="heading">Chat</p>
+
+        <div class="chat-list">
+            <div *ngFor="let msg of chat; let i = index" (click)="onSelectChat(msg,i)">
+                    <div class="chat-row">
+                        <span class="text">{{msg.text}}</span>
+                        <span class="time">{{msg.timestamp}}</span> 
+                    </div>
+                    <div class="reply" *ngIf=msg.child.length >{{msg.child.length}} reply</div>
+            </div>
+        
+          </div>
+          <input placeholder="Type here" class="chat-input" [(ngModel)]="value" #ctrl="ngModel" (keyup.enter)="onEnter()" required>
+    </div>
+        
+    <div   *ngIf="index !== null" class="right-container">
+        <app-right-chat 
+        *ngIf="index !== null"
+        (newItemEvent)="addChildItem($event)" 
+        (closeThread)="closeThread($event)" 
+        [chat]=[currentMsg]></app-right-chat>
+    </div>
+
+</div>
+
+
+
+
